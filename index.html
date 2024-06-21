@@ -1,4 +1,4 @@
-<!DOCTYPE html>   <！DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
@@ -9,9 +9,9 @@
 <body>
     <!-- 微信开放标签，生成跳转按钮 -->
     <wx-open-launch-weapp
-        username   用户名="gh_a46ae7e108b5"  <!-- 草料二维码小程序的原始ID -->
+        username="gh_a46ae7e108b5"  <!-- 草料二维码小程序的原始ID -->
         path="pages/index/index"  <!-- 替换为实际的小程序页面路径 -->
-        id="launch-btn">   id=“launch-btn”>
+        id="launch-btn">
         <script type="text/wxtag-template">
             <style>
                 .btn {
@@ -31,6 +31,7 @@
     </wx-open-launch-weapp>
 
     <script>
+        // 绑定按钮点击事件
         document.getElementById('launch-btn').addEventListener('click', function() {
             wx.miniProgram.navigateTo({ url: '/pages/index/index' });
         });
