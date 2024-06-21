@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>跳转到草料二维码微信小程序</title>
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+</head>
+<body>
+    <!-- 微信开放标签，生成跳转按钮 -->
+    <wx-open-launch-weapp
+        username="gh_a46ae7e108b5"  <!-- 草料二维码小程序的原始ID -->
+        path="pages/index/index"  <!-- 替换为实际的小程序页面路径 -->
+        id="launch-btn">
+        <script type="text/wxtag-template">
+            <style>
+                .btn {
+                    display: inline-block;
+                    width: 200px;
+                    height: 40px;
+                    line-height: 40px;
+                    background-color: #1aad19;
+                    color: #fff;
+                    text-align: center;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+            </style>
+            <div class="btn">打开草料二维码小程序</div>
+        </script>
+    </wx-open-launch-weapp>
+
+    <script>
+        document.getElementById('launch-btn').addEventListener('click', function() {
+            wx.miniProgram.navigateTo({ url: '/pages/index/index' });
+        });
+    </script>
+</body>
+</html>
