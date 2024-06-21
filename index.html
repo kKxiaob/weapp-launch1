@@ -1,40 +1,40 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
+<!DOCTYPE html>   <！DOCTYPE html   超文本标记语言>
+<html lang="zh-CN">   < html lang   只 = "应用" >
+<head>   < >头
+    <meta charset="UTF-8">   
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>跳转到草料二维码微信小程序</title>
-    <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>< script src = " https://res.wx.qq.com/open/js/jweixin-1.6.0.js " > < /脚本>
 </head>
 <body>
     <!-- 微信开放标签，生成跳转按钮 -->
     <wx-open-launch-weapp
         username="gh_a46ae7e108b5"  <!-- 草料二维码小程序的原始ID -->
         path="pages/index/index"  <!-- 替换为实际的小程序页面路径 -->
-        id="launch-btn">
+        id=   id=“launch-btn”>"launch-btn"   “启动-BTN”>
         <script type="text/wxtag-template">
-            <style>
-                .btn {
-                    display: inline-block;
-                    width: 200px;
-                    height: 40px;
-                    line-height: 40px;
+            <style>   <时尚>
+                .btn   BTN公司 {
+                    display: inline-block;   显示:inline-block;
+                    width:    宽度:200 px;200px;
+                    height:    高度:40像素;40px;
+                    line-height:    行高:40像素;40px;
                     background-color: #1aad19;
-                    color: #fff;
-                    text-align: center;
+                    color:    颜色： #fff;#fff;
+                    text-align: center;   text-align:中心;
                     border-radius: 5px;
-                    cursor: pointer;
+                    cursor: pointer;   光标:指针;
                 }
-            </style>
-            <div class="btn">打开草料二维码小程序</div>
-        </script>
+            <   > < /风格/s   /风格>tyle>
+            <div class   类="btn"   “按钮”>打开草料二维码小程序</div>
+        </script>   > < /脚本
     </wx-open-launch-weapp>
 
-    <script>
+    <script>   < >脚本
         // 绑定按钮点击事件
-        document.getElementById('launch-btn').addEventListener('click', function() {
-            wx.miniProgram.navigateTo({ url: '/pages/index/index' });
-        });
-    </script>
-</body>
+        document.getElementById('launch-btn').addEventListener('click', function() {. getelementbyid   getElementById(“launch-btn”)。addEventListener('click'   “点击”， function   函数() {
+            wx.miniProgram.navigateTo({ url: '/pages/index/index' });wx.miniProgram。navigateTo   小程序。导航到({url: '/pages/index/index'   “/页/索引/指数”});
+        });   }）;
+    </script>   > < /脚本
+</body>   身体< / >
 </html>
