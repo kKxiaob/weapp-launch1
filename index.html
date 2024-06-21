@@ -9,7 +9,7 @@
 <body>
     <!-- 微信开放标签，生成跳转按钮 -->
     <wx-open-launch-weapp
-        username="gh_a46ae7e108b5"  <!-- 草料二维码小程序的原始ID -->
+        username="gh_a46ae7e108b5"  <!-- 替换为草料二维码小程序的原始ID -->
         path="pages/index/index"  <!-- 替换为实际的小程序页面路径 -->
         id="launch-btn">
         <script type="text/wxtag-template">
@@ -31,6 +31,16 @@
     </wx-open-launch-weapp>
 
     <script>
+        // 检查是否在微信浏览器中打开
+        function isWeixinBrowser() {
+            var ua = navigator.userAgent.toLowerCase();
+            return /micromessenger/.test(ua);
+        }
+
+        if (!isWeixinBrowser()) {
+            alert('请在微信浏览器中打开此页面');
+        }
+
         document.getElementById('launch-btn').addEventListener('click', function() {
             wx.miniProgram.navigateTo({ url: 'pages/index/index' });
         });
